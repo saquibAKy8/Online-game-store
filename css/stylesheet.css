@@ -1,0 +1,765 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gentium+Book+Plus:ital@1&family=Shadows+Into+Light&display=swap');
+
+* {
+    font-family: 'Gentium Book Plus', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    
+}
+
+body{
+    background-color: #453e63;
+}
+
+input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+html{
+    font-size: 70%;
+    overflow-x: hidden;
+}
+
+
+section{
+    padding: 3rem 2rem;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    color:#ff7c47;
+    font-size: 5rem;
+}
+
+.empty{
+    padding: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    color:#b1363a;
+}
+
+.message{
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap: 1.5rem;
+}
+
+.message span{
+    font-size: 2rem;
+    color: black;
+}
+
+.message i{
+    cursor: pointer;
+    color: red;
+    font-size: 2.5rem;
+}
+
+.message i:hover{
+    transform: rotate(90deg);
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    background-color:  #a7b346 ;
+}
+
+.option-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    background-color:   #77adff  ;
+}
+
+.delete-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    background-color:   #b1363a  ;
+}
+
+.white-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    background-color:#ff7c47 ;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover,
+.white-btn:hover{
+    background-color: white;
+    color: #453e63;
+}
+
+.heading{
+    min-height: 50vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: url(../images/heading.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.heading h3{
+    font-size: 5rem;
+    color: #ff7c47;
+}
+
+.heading p{
+    font-size: 3rem;
+    color: white;
+}
+
+.heading p a{
+    font-size: 3rem;
+    color:#a7b346;
+}
+
+.heading p a:hover{
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(1rem);
+        opacity: 0.2s;
+    }
+}
+
+/* Login and Registration */
+.form-container{
+    min-height: 100vh;
+    background-color:  #453e63 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.form-container form{
+    padding: 2rem;
+    width: 50rem;
+    border-radius: 1rem;
+    box-shadow: black;
+    border: 0.5rem;
+    background: url(../images/register.jpg);
+    text-align: center;
+}
+
+.form-container form h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ff7c47;
+}
+
+.form-container form .box{
+    width: 100%;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: black;
+    border: 0.5rem;
+    margin: 1rem 0;
+}
+
+.form-container form p{
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    color: #ff7c47;
+}
+
+.form-container form p a{
+    color: white;
+}
+
+.form-container form p a:hover{
+    text-decoration: underline;
+}
+
+/* Header */
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: url(../images/footer.jpg);
+}
+
+.header.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .flex{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .flex .logo{
+    font-size: 3rem;
+    color: #ff7c47;
+}
+
+.header .flex .logo span{
+    color: white;
+}
+
+.header .flex .navbar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #ff7c47;
+}
+
+.header .flex .navbar a:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.header .flex .icons > *{
+    font-size: 2.5rem;
+    color: orange;
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+.header .flex .icons > *:hover{
+    color: white;
+    cursor: pointer;
+}
+
+#menuBtn{
+    display: none;
+}
+
+.header .flex .userBox{
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    display: none;
+    animation:fadeIn 0.2s linear;
+    background-color:white;
+}
+
+.header .flex .userBox.active{
+    display: inline-block;
+}
+
+.header .flex .userBox p{
+    font-size: 2rem;
+    color:#ff7c47;
+    margin-bottom: 1.5rem;
+}
+
+.header .flex .userBox p span{
+    color:#a7b346;
+}
+
+.header .flex .userBox .delete-btn{
+    margin-top: 0;
+}
+
+.header .flex .userBox .delete-btn:hover{
+    background-color: #453e63;
+    color: white;
+}
+
+/* footer */
+footer{
+    background: url(../images/footer.jpg);
+    font-size: 2rem;
+    padding: 20px 23px;
+    color: white;
+    text-align: center;
+}
+
+footer span x{
+    color: #ff9e00;
+}
+
+/* homepage */
+.home{
+    min-height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/homeimage.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .content{
+    text-align: center;
+    width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color:#ff7c47;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color:white;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.home .content p span{
+    color: #a7b346;
+}
+
+.games .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.games .boxContainer .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color:#77adff;
+}
+
+.games .boxContainer .box img{
+    height: 30rem;
+}
+
+.games .boxContainer .box .name{
+    padding: 1rem 0;
+    font-size: 3rem;
+    color:#ff7c47;
+}
+
+.games .boxContainer .box .price{
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.games .boxContainer .quantity{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.goProfile .flex{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.goProfile .flex .image{
+    flex: 1 1 40rem;
+}
+
+.goProfile .flex .image img{
+    width: 100%;
+}
+
+.goProfile .flex .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.goProfile .flex .content h3{
+    font-size: 5rem;
+    color: #ff7c47;
+}
+
+.goProfile .flex .content p{
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.goProfile .flex .content p span{
+    color: #a7b346;
+}
+
+.contactMe{
+    background-color:  #322926 ;
+}
+
+.contactMe .content{
+    max-width: 50rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.contactMe .content h3{
+    font-size: 5rem;
+    color: #ff7c47;
+}
+
+.contactMe .content p{
+    padding: 1rem 0;
+    line-height: 1.5;
+    font-size: 2rem;
+    color: white;
+}
+
+/* contact page */
+.contact form{
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact form h3{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff7c47;
+}
+
+.contact form .box{
+    margin: 1rem 0;
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 2rem;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
+
+/* cart page */
+.shoppingCart .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.shoppingCart .boxContainer .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: #ff7c47;
+}
+
+.shoppingCart .boxContainer .box .fa-circle-xmark{
+    position: relative;
+    top: 1rem; right: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    background-color:#b1363a;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.shoppingCart .boxContainer .box .fa-circle-xmark:hover{
+    background-color: white;
+    color: #b1363a;
+}
+
+.shoppingCart .boxContainer .box img{
+    height: 30rem;
+}
+
+.shoppingCart .boxContainer .box .name{
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.shoppingCart .boxContainer .box .price{
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: white;
+}
+
+.shoppingCart .boxContainer .box input[type="number"]{
+    margin: 0.5rem 0;
+    padding: 1.2rem 1.4rem;
+    font-size: 2rem;
+    width: 10rem;
+}
+
+.shoppingCart .boxContainer .box .subTotal{
+    padding-top: 1.5rem;
+    font-size: 3rem;
+    color: white;
+}
+
+.shoppingCart .boxContainer .box .subTotal span{
+    color: #453e63;
+}
+
+.shoppingCart .cartTotal{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+}
+
+.shoppingCart .cartTotal p{
+    font-size: 4rem;
+    color: white;
+}
+
+.shoppingCart .cartTotal p span{
+    color: #ff7c47;
+}
+
+.shoppingCart .cartTotal .flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    column-gap: 1rem;
+    justify-content: center;
+}
+
+.shoppingCart .disabled{
+    pointer-events: none;
+    opacity: 0.5;
+    user-select: none;
+}
+
+/* checkout */
+.displayOrders{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.displayOrders p{
+    background-color: #ff7c47;
+    color: white;
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.displayOrders p span {
+    color:#453e63;
+}
+
+.displayOrders .grandTotal{
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: #a7b346;
+}
+
+.displayOrders .grandTotal span{
+    color: #ff7c47;
+}
+
+.checkout form{
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+    border: 0.5rem;
+}
+
+.checkout form h3{
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 3rem;
+}
+
+.checkout form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.checkout form .flex .inputBox{
+    flex: 1 1 40rem;
+}
+
+.checkout form .flex span{
+    font-size: 2rem;
+    color:#ff7c47;
+}
+
+.checkout form .flex select,
+.checkout form .flex input{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.4rem;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+/* orders */
+.myOrders .boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.myOrders .boxContainer .box{
+    flex: 1 1 40rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    background-color:#77adff;
+    padding: 1rem 2rem;
+}
+
+.myOrders .boxContainer .box p{
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: white;
+}
+
+.myOrders .boxContainer .box p span{
+    color:black ;
+}
+
+/* search */
+.searchForm form{
+    max-width: 1200px;
+    margin:0 auto;
+    display: flex;
+    gap:1rem;
+ }
+
+ .searchForm form .btn{
+    margin-top: 0;
+ }
+
+.searchForm form .box{
+    width: 100%;
+    padding:1.2rem 1.4rem;
+    border:solid;
+    font-size: 2rem;
+    color: black;
+    border-radius: .5rem;
+ }
+
+
+/* responsive media */
+@media (max-width:990px){
+
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:770px){
+
+    #menuBtn{
+        display: inline-block;
+    }
+
+    .header .flex .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color:#453e63;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .navbar a{
+        margin: 2rem;
+        display: block;
+    }
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        min-height: 30vh;
+    }
+
+    .heading h3{
+        font-size: 3rem;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+}
